@@ -1,0 +1,105 @@
+% HW0: some simple excerises to get started with MATLAB. Please complete by
+% the second class. Answer questions in comments and return assignment via
+% github
+%% numbers vs strings
+%Run the following two sections. explain why one gives a sensible result and the other doesn't
+% extra credit: can you explain the value of the variable b? 
+x = 1; 
+y = x + x
+%%
+a = '1';
+b = a+a
+%% concatenation
+% what is being done by the following statements? what is the difference between x2 and a2? 
+% what is the difference between x2 and x2b (hint run the size command on
+% these arrays and explain the results). 
+
+x2 = [x x]
+
+a2 = [a a]
+
+x2b = [x; x]
+
+%% = vs ==, isequal
+% explain why the identical commands with the == commands give different answers 
+% hint: check the values of a and b as you execute the following statements
+% if necessary. 
+a = 1; b =2; 
+
+a == b
+a = b;
+a == b
+
+
+
+%explain why the following gives an error:
+x2b == x2
+
+%explain the result of this nearly equivalent operation
+isequal(x2b,x2)
+
+%change these two lines by adding a single character to each such that the
+%they both evaluate to true and neither gives an error:
+
+%explain why the following gives an error:
+x2b == x2
+
+%explain the result of this nearly equivalent operation
+isequal(x2b,x2)
+
+
+
+%%  : operator 
+%(hint for the following type "help colon" at the command line to see
+% how the ":" operator works
+% the following makes an array of the numbers from one to ten: 
+oneToTen = 1:10;
+
+%here are two ways to make the array of numbers from 1 to twenty
+%explain how the second line works.
+1:20
+[oneToTen, oneToTen+10]
+% do each of the following in two different ways, by manipulating the array
+% oneToTen and by defining it concisely from scratch
+
+% 1. even numbers from two to twenty
+
+% 2. odd numbers from one to nineteen
+
+% 3. Even numbers in reverse order from twenty to two (hint lookup the
+% matlab function fliplr)
+
+% explain why the fliplr funciton no longer works and find a different
+% matlab function that performs an equivalent function on the same array
+oneToTen = oneToTen';
+fliplr(oneToTen)
+
+%% matrices, . operator
+
+%look at the matrix this defines. Note the other functions zeros, eye, and
+%rand which can define matrices. 
+
+m1 = ones(2);
+m2 = 2*ones(2);
+
+%explain the output of these two commands:
+m1*m2
+m1.*m2
+
+%explain this command:
+m2./m1
+%extra credit: explain why this command gives a warning:
+m2/m1
+
+%% access particular elements
+
+%define a random matrix
+
+rand_nums = rand(5);
+
+%explain what is being done in each of the following lines
+
+
+
+
+
